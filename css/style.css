@@ -1,0 +1,362 @@
+/* GLOBAL STYLES */
+/* Define global styles such as font-family, colors, etc. */
+
+#nav{
+    grid-area: nav;
+}
+
+#header{
+    grid-area: header;
+    padding: 150px;
+}
+
+#main{
+    grid-area: main
+}
+
+#aside{
+    grid-area: sidebar;
+}
+
+#project-div{
+    grid-area: proj-div; 
+}
+
+#about-div{
+    grid-area: about-div;
+}
+
+#footer{
+    grid-area: footer;
+    background-color: #e9ecef;
+}
+
+/* LAYOUT */  
+.body-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 70px auto auto auto auto auto;
+    grid-template-areas: 
+      "nav nav nav nav"
+      "header header header header"
+      "main main main main"
+      "proj-div proj-div proj-div proj-div"
+      "about-div about-div about-div about-div"
+      "footer footer footer footer";
+    grid-gap: 0.2rem;
+}
+
+/* NAVEGATE TO DIFFERENT SECTION THE MAIN(INDEX) PAGE*/
+/* using CSS and HTML properties */
+html{ 
+    scroll-behavior: smooth;
+    background-color: #f8f9fa;
+}
+
+
+/* NAVBAR */
+.nav-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    height: 50px;
+    padding: 15px 10px 15px 10px;
+    margin: -15px -15px 0px -15px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(89, 84, 84, 0.1);
+    z-index: 999;
+    background-color: #dcdcdd;
+}
+.nav-container li{
+    margin: 0 10px;
+    display: inline-block;
+}
+.nav-container ul{
+    list-style: none;
+}
+.nav-container a{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: lighter;
+    font-family: serif;
+    transition: color 0.3s ease;
+}
+.nav-element:hover{
+    color: rgb(255,69,0);
+}
+
+.connect-btn{
+    border: 2px solid rgb(255, 69, 0);
+    border-radius: 7px;
+    color: rgb(255, 69, 0);
+}
+
+.connect-btn:hover{
+    background-color: rgb(255, 69, 0);
+    color: #fff;
+}
+
+/* HEADER */
+#header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.header-text{
+    text-align: center;
+}
+
+/* Header text */
+#text-name{
+    padding: 0.2rem;
+    font-size: 65px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+#header-greeding{
+    font-size: 15px;
+    color: rgb(255, 69, 0, 1);
+}
+
+
+
+/* MAIN CONTENT (BLOG POST) */
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 70px auto auto;
+    grid-template-areas: 
+    "p p"
+    "p1 p2"
+    "p3 p4";
+    grid-gap: 0.5rem;
+    margin: 35px;
+    padding-top: 95px; 
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 15px;
+    margin: 0.2rem;
+}
+
+#blogp{
+    grid-area: p;
+    align-items: center;
+}
+
+#p1{
+    grid-area: p1;
+    background-color: white;
+}
+
+#p2{
+    grid-area: p2;
+    background-color: rgb(255, 255, 255);
+}
+
+#p3{
+    grid-area: p3;
+    background-color: white;
+}
+#p4{
+    grid-area: p4;
+}
+
+.paragraph-title{
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.card-content{
+    background-color: #fff;
+}
+.read-more-btn{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    border-radius: 7px;
+}
+.read-more-btn:hover{
+    background-color: rgb(255,69,0);
+}
+
+/* PROJECT SECTION */
+.proj-title{
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    grid-area: p-title;
+    text-align: center;
+}
+#proj-1{
+    grid-area: proj1;
+    border: solid grey;
+    border-radius: 0.2rem;
+}
+
+#proj-2{
+    grid-area: proj2;
+    border: solid grey;
+    border-radius: 0.2rem;
+}
+
+#proj-3{
+    grid-area: proj3;
+    border: solid grey;
+    border-radius: 0.2rem;
+}
+#proj-4{
+    grid-area: proj4;
+    border: solid grey;
+    border-radius: 0.2rem;
+}
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "p-title p-title"
+    "proj1 proj2"
+    "proj3 proj4";
+    grid-gap: 2rem;
+    margin: 70px;
+    padding: 0px;
+    padding-top: 95px;
+}
+.g-proj{
+    padding: 15px;
+}
+.g-proj img{
+    width: 100%;
+    height: 350;
+}
+.t-proj{
+    text-align: left;
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.g-proj a{
+    float: right;
+}
+
+/* ABOUT ME CONTENT */
+#about-div{
+    margin: 70px;
+    padding: 95px 50px 50px 50px;
+}
+.about-me{
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.paragraph-about-me{
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+#footer{
+    padding: 55px;
+    margin: 25px -15px -20px -15px;
+    text-align: center;
+}
+.footer-title{
+    color:  rgb(255,69,0);
+    font-size: 15px;
+}
+.footer-subtitle{
+    font-size: 55px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+.footer-greeding{
+    font-size: 15px;
+}  
+#footer a{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 15px;
+    margin: 70px;
+}
+#footer a:hover{
+    background-color: rgb(255,69,0);
+    transform: scale(1.2);
+}
+
+/* RESPONSIVE DESIGN */
+/* Apply responsive styles using media queries */
+  
+/* Mobile screens */
+@media (max-width: 767px){
+    .body-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px auto auto auto auto auto auto;
+        grid-template-areas: 
+          "nav"
+          "header "
+          "main"
+          "sidebar"
+          "proj-div"
+          "about-div"
+          "footer";
+          grid-gap: 0.2rem;
+    }
+
+    .project-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+        "p-title"
+        "proj1"
+        "proj2"
+        "proj3"
+        "proj4";
+        grid-gap: 0.2rem;
+        margin: 35px;
+        padding: 0px;
+    }
+
+    #profile-image{
+        display: none;
+    }
+
+    .main-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px auto auto auto auto;
+        grid-template-areas: 
+        "p"
+        "p1" 
+        "p2" 
+        "p3"
+        "p4";
+        grid-gap: 0.2rem;
+    }
+
+    .main-container{
+        padding: 15px;
+    }
+}
+
+
