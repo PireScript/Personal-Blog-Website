@@ -1,0 +1,17 @@
+/* ABOUT ME CONTENT */
+#about-div{
+    margin: 70px;
+    padding: 95px 50px 50px 50px;
+}
+.about-me{
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.paragraph-about-me{
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    line-height: 1.5;
+}

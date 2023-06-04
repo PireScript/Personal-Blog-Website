@@ -1,0 +1,74 @@
+ /*
+ Content{
+    imported: style.css
+    page: main page (blogpost content)
+ }
+ */
+
+ /* MAIN CONTENT (BLOG POST) */
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 70px auto auto;
+    grid-template-areas: 
+    "p p"
+    "p1 p2"
+    "p3 p4";
+    grid-gap: 0.5rem;
+    margin: 35px;
+    padding-top: 95px; 
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 15px;
+    margin: 0.2rem;
+}
+
+#blogp{
+    grid-area: p;
+    align-items: center;
+}
+
+#p1{
+    grid-area: p1;
+    background-color: white;
+}
+
+#p2{
+    grid-area: p2;
+    background-color: rgb(255, 255, 255);
+}
+
+#p3{
+    grid-area: p3;
+    background-color: white;
+}
+#p4{
+    grid-area: p4;
+}
+
+.paragraph-title{
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.card-content{
+    background-color: #fff;
+}
+.read-more-btn{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    border-radius: 7px;
+}
+.read-more-btn:hover{
+    background-color: rgb(255,69,0);
+}
